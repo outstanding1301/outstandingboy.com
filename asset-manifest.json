@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/outstandingboy.com/static/css/main.2b6577bf.chunk.css",
+    "main.js": "/outstandingboy.com/static/js/main.61f6d534.chunk.js",
+    "main.js.map": "/outstandingboy.com/static/js/main.61f6d534.chunk.js.map",
+    "runtime-main.js": "/outstandingboy.com/static/js/runtime-main.32c0f236.js",
+    "runtime-main.js.map": "/outstandingboy.com/static/js/runtime-main.32c0f236.js.map",
+    "static/js/2.c7e3fb11.chunk.js": "/outstandingboy.com/static/js/2.c7e3fb11.chunk.js",
+    "static/js/2.c7e3fb11.chunk.js.map": "/outstandingboy.com/static/js/2.c7e3fb11.chunk.js.map",
+    "index.html": "/outstandingboy.com/index.html",
+    "precache-manifest.58b27ad899c803d8882336414c324b69.js": "/outstandingboy.com/precache-manifest.58b27ad899c803d8882336414c324b69.js",
+    "service-worker.js": "/outstandingboy.com/service-worker.js",
+    "static/css/main.2b6577bf.chunk.css.map": "/outstandingboy.com/static/css/main.2b6577bf.chunk.css.map",
+    "static/js/2.c7e3fb11.chunk.js.LICENSE.txt": "/outstandingboy.com/static/js/2.c7e3fb11.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.32c0f236.js",
+    "static/js/2.c7e3fb11.chunk.js",
+    "static/css/main.2b6577bf.chunk.css",
+    "static/js/main.61f6d534.chunk.js"
+  ]
+}

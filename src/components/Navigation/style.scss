@@ -1,0 +1,214 @@
+@import '../../global.scss';
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 44px;
+    font-size: 17px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  
+  .nav-content {
+    padding: 0 22px;
+    padding-left: calc(max(22px, env(safe-area-inset-left)));
+    padding-right: calc(max(22px, env(safe-area-inset-right)));
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .nav-content-header {
+      display: none;
+      height: 44px;
+  }
+  
+  .menu-list {
+    cursor: default;
+    width: auto;
+    height: 44px;
+    display: flex;
+    list-style: none;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+  }
+  
+  .menu-item {
+    padding: 0;
+    margin: 0;
+    a {
+      display: inline-block;
+      color: #f5f5f7;
+      opacity: 0.8;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 3.14286;
+      z-index: 1;
+      text-decoration: none;
+      -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      
+      -webkit-transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .highlight {
+      color: #7effa5;
+    }
+  }
+  
+  @include labtop {
+      .navbar {
+        min-width: 320px;
+      }
+  }
+
+  @include mobile {
+      .navbar {
+        //   overflow-y: hidden;
+        // backdrop-filter: none;
+        transition: background .44s .2s cubic-bezier(0.52, 0.16, 0.24, 1)
+        , height .56s cubic-bezier(0.52, 0.16, 0.24, 1);
+      }
+      
+      .nav-content {
+          padding: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+      }
+
+      .menu-list {
+          visibility: hidden;
+      }
+
+      .nav-content-header {
+          display: block;
+      }
+  }
+
+  .header-list {
+    cursor: default;
+    width: auto;
+    height: 44px;
+    display: flex;
+    list-style: none;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+  }
+  
+  .header-item {
+    min-width: 44px;
+    padding: 0;
+    margin: 0;
+    a {
+      display: block;
+      color: #f5f5f7;
+      opacity: 0.8;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 3.14286;
+      z-index: 1;
+      -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      text-decoration: none;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    
+    .github {
+        line-height: 1.77;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    input#menu {
+        display: none;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+        height: 24px;
+        width: 24px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    .menu-icon .menu,
+    .menu-icon .menu::before,
+    .menu-icon .menu::after {
+        background: #f5f5f7;
+        opacity: 0.8;
+        content: '';
+        display: block;
+        height: 2px;
+        position: absolute;
+        transition: background ease .3s, top ease .3s .3s, transform ease .3s, opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);;
+        width: 20px;
+    }
+
+    .menu-icon:hover .menu,
+    .menu-icon:hover .menu::before,
+    .menu-icon:hover .menu::after {
+        // background: #7effa5;
+        opacity: 1;
+    }
+
+    .menu-icon .menu::before {
+        top: -6px;
+    }
+
+    .menu-icon .menu::after {
+        top: 6px;
+    }
+
+    #menu:checked + .menu-icon .menu {
+        background: transparent;
+    }
+
+    #menu:checked + .menu-icon .menu::before {
+        transform: rotate(45deg);
+    }
+
+    #menu:checked + .menu-icon .menu::after {
+        transform: rotate(-45deg);
+    }
+
+
+    #menu:checked + .menu-icon .menu::before,
+    #menu:checked + .menu-icon .menu::after {
+        top: 0;
+        transition: top ease .3s, transform ease .3s .3s;
+    }
+
+    #menu:checked ~ .menu-list{
+        visibility: visible;
+        background: red;
+    }
+  }
